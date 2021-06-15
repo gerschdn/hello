@@ -1,12 +1,19 @@
 
-#include <iostream>
+#include <utility>
 
-using namespace std;
-
-int main()
+struct S
 {
-	cout << "Hello, world" << endl;
+    S();
+    int i;
+};
 
-	return 0;
+void foo(S&&);
+
+
+int func()
+{
+    S s;
+    foo(std::move(s));
+    return s.i;
 }
 
