@@ -16,4 +16,3 @@ int func()
     foo(std::move(s));
     return s.i;
 }
-
